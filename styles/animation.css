@@ -1,0 +1,74 @@
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: 800ms all ease;
+  }
+
+  .skill {
+    transform: translateY(-50px) scale(0.1);
+    opacity: 0;
+    transition: 800ms all ease;
+  }
+
+  #experience .checkpoint div {
+    opacity: 0;
+    transition: all 1s ease;
+  }
+
+  #experience .checkpoint:nth-child(odd) div {
+    transform: translateX(150px);
+  }
+
+  #experience .checkpoint:nth-child(even) div {
+    transform: translateX(-150px);
+  }
+
+  .passive-state {
+    /* use important to ensure final state is visible */
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  /* Responsive smooth transition */
+  #hamburger .patty {
+    transition: 300ms opacity ease;
+  }
+
+  #hamburger::before,
+  #hamburger::after {
+    transition: 300ms all ease;
+  }
+
+  #navbar {
+    transition: 200ms max-height linear;
+  }
+
+  #navbar ul {
+    transition: 500ms gap ease;
+  }
+
+  #about .content img {
+    transition: 300ms height ease, 300ms border-radius ease;
+  }
+
+  #education .content p {
+    transition: 500ms font-size ease;
+  }
+
+  #skills {
+    transition: 500ms padding ease;
+  }
+
+  #skills .content {
+    transition: 400ms gap ease;
+  }
+
+  #skills .skill img {
+    transition: 400ms transform ease;
+  }
+
+  #skills .skill figcaption {
+    transition: 400ms font-size ease;
+  }
+}

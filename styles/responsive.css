@@ -1,0 +1,199 @@
+@media (max-width: 1200px) {
+  #skills {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #navbar ul {
+    gap: 1rem;
+  }
+
+  #about .content {
+    gap: 1rem;
+  }
+
+  #about .content img {
+    height: 200px;
+    border-radius: 2rem;
+  }
+
+  #about .content p {
+    font-size: 1rem;
+  }
+
+  #skills {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+  }
+
+  #skills .content {
+    gap: 10px;
+  }
+
+  #skills .skill {
+    padding: 12px 0 1.5rem;
+  }
+
+  #skills .skill img {
+    transform: scale(0.8);
+  }
+
+  #skills .skill figcaption {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 640px) {
+  #hamburger {
+    display: block;
+    position: relative;
+    height: 24px;
+    margin: auto 0;
+  }
+
+  #hamburger.menu-active .patty {
+    opacity: 0;
+  }
+
+  #hamburger.menu-active::before {
+    rotate: 225deg;
+    top: 42.5%; /* best position to make a cross */
+  }
+
+  #hamburger.menu-active::after {
+    rotate: -225deg;
+    bottom: 42.5%; /* best position to make a cross */
+  }
+
+  #navbar {
+    max-height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100vw; /* make it to cover entire screen width */
+    margin: 0;
+    background-color: var(--primary-black-color);
+  }
+
+  #navbar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #navbar li {
+    width: 100%; /* make border refer to navbar width */
+    border-top: 0.5px solid gray;
+    text-align: center;
+  }
+
+  #navbar li:hover {
+    border-radius: 0;
+  }
+
+  #navbar li a {
+    width: 100%; /* make clickable area refer to navbar width */
+    padding: 8px 0;
+  }
+
+  #about .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about .content img {
+    height: 250px;
+  }
+
+  #about .content p {
+    text-align: center;
+  }
+
+  #education .content p {
+    font-size: 1.5rem;
+  }
+
+  #education .content .year-taken {
+    font-size: 1rem;
+  }
+
+  #skills .content {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(5, minmax(0, 1fr));
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  #home .content h1 {
+    padding: 0 1rem;
+  }
+
+  #about .content {
+    padding: 0 1rem;
+  }
+
+  /* We use n-th child to make specificity equal to larger's sceen css */
+  #experience .checkpoint:nth-child(n) {
+    padding: calc(var(--experience-box-gap) / 2) 0;
+    border: none;
+    transform: none;
+  }
+
+  #experience .checkpoint:nth-child(n) div {
+    border-radius: 6px;
+    transform: translateY(calc(-1 / 2 * var(--experience-box-gap)));
+    position: relative; /* to make z-index works */
+    z-index: 1;
+  }
+
+  #experience .checkpoint:nth-child(n)::before {
+    left: 50%;
+    transform: translate(
+      calc(-1 * var(--experience-checkpoint-x-translation)),
+      -50%
+    );
+  }
+
+  /* use this as a line instead of timeline border */
+  #experience .checkpoint::after {
+    content: "";
+    background-color: var(--primary-red-color);
+    width: var(--experience-line-width);
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - var(--experience-line-width));
+  }
+
+  #education .content {
+    padding: 0 1rem;
+  }
+
+  #education .content p {
+    font-size: 1.2rem;
+  }
+
+  #skills .content {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(6, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  #footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #footer .content {
+    text-align: center;
+  }
+
+  #footer .contact h3 {
+    text-align: center;
+  }
+}

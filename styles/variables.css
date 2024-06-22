@@ -1,0 +1,19 @@
+:root {
+  --primary-black-color: rgb(35, 31, 32);
+  --primary-red-color: rgb(236, 52, 76);
+  --primary-blue-color: rgb(113, 207, 245);
+  --night-blue-color: rgb(14, 20, 36);
+  --light-bg-color: linear-gradient(45deg, #bbbbbb, whitesmoke);
+  --dark-bg-color: linear-gradient(180deg, var(--night-blue-color), black);
+  --header-highest-element: 40px;
+  --header-padding: 12px;
+  --header-height: calc(
+    var(--header-highest-element) + 2 * var(--header-padding)
+  );
+  --experience-line-width: 2px;
+  --experience-box-gap: 2.5rem;
+  --experience-checkpoint-size: 1rem;
+  --experience-checkpoint-x-translation: calc(
+    (var(--experience-line-width) + var(--experience-checkpoint-size)) / 2
+  );
+}

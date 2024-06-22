@@ -1,0 +1,92 @@
+[
+  {
+    "name": "HTML",
+    "image": "assets/skills/html.svg",
+    "height": "50px"
+  },
+  {
+    "name": "CSS",
+    "image": "assets/skills/css.svg",
+    "height": "50px"
+  },
+  {
+    "name": "JavaScript",
+    "image": "assets/skills/javascript.svg",
+    "height": "50px"
+  },
+  {
+    "name": "TypeScript",
+    "image": "assets/skills/typescript.svg",
+    "height": "50px"
+  },
+  {
+    "name": "Python",
+    "image": "assets/skills/python.svg",
+    "height": "50px"
+  },
+  {
+    "name": "PHP",
+    "image": "assets/skills/php.svg",
+    "height": "40px"
+  },
+  {
+    "name": "React",
+    "image": "assets/skills/react.svg",
+    "height": "60px"
+  },
+  {
+    "name": "Nuxt",
+    "image": "assets/skills/nuxt.svg",
+    "height": "50px"
+  },
+  {
+    "name": "Tailwind",
+    "image": "assets/skills/tailwind-css.svg",
+    "height": "35px"
+  },
+  {
+    "name": "Node.js",
+    "image": "assets/skills/nodejs.svg",
+    "height": "45px"
+  },
+  {
+    "name": "Express",
+    "image": "assets/skills/express.svg",
+    "height": "25px"
+  },
+  {
+    "name": "FastAPI",
+    "image": "assets/skills/fastapi.svg",
+    "height": "50px"
+  },
+  {
+    "name": "CodeIgniter",
+    "image": "assets/skills/codeigniter.svg",
+    "height": "60px"
+  },
+  {
+    "name": "MySQL",
+    "image": "assets/skills/mysql.svg",
+    "height": "80px"
+  },
+  {
+    "name": "PostgreSQL",
+    "image": "assets/skills/postgresql.svg",
+    "height": "50px"
+  },
+  {
+    "name": "MariaDB",
+    "image": "assets/skills/mariadb.svg",
+    "height": "40px"
+  },
+  {
+    "name": "Docker",
+    "image": "assets/skills/docker.svg",
+    "height": "60px"
+  },
+  {
+    "name": "Git",
+    "image": "assets/skills/git.svg",
+    "height": "50px"
+  }
+]

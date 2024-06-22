@@ -1,0 +1,471 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  font-family: "Roboto", sans-serif;
+}
+
+.link-btn {
+  /* 
+  Increase anchor clickable area 
+  ref: https://stackoverflow.com/questions/11078509/how-to-increase-the-clickable-area-of-a-a-tag-button 
+  */
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+}
+
+.container {
+  min-height: fit-content;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+main {
+  background: var(--dark-bg-color);
+}
+
+section {
+  /* make navbar not intercept the content when scroll navigation */
+  scroll-margin-top: var(--header-height);
+}
+
+/* Navbar start */
+header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--header-padding);
+  background-color: var(--primary-black-color);
+}
+
+header .logo img {
+  height: var(--header-highest-element);
+  aspect-ratio: 1 / 1;
+  user-select: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+}
+
+#navbar {
+  margin: auto 1rem;
+  color: white;
+  width: max-content;
+  font-weight: 500;
+}
+
+#hamburger {
+  display: none;
+  /* reset button style */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0;
+}
+
+#hamburger::before,
+#hamburger .patty,
+#hamburger::after {
+  display: block;
+  background-color: white;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+}
+
+#hamburger::before {
+  content: "";
+  position: absolute;
+  top: 0;
+}
+
+#hamburger::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+}
+
+#navbar.menu-active {
+  /* just use the number that can contain all navbar content (lil bit overflow is acceptable) */
+  /* actual number is 6x(link_height + link_border) = 243px */
+  max-height: 250px;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+#navbar li a {
+  padding: 2px 6px;
+}
+
+#navbar li:hover {
+  border-radius: 4px;
+  color: black;
+  background-color: white;
+}
+/* Navbar end */
+
+/* Hero start */
+#home {
+  height: 100vh;
+  position: relative;
+  margin-top: var(--header-height);
+}
+
+#particles-js {
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    var(--night-blue-color),
+    var(--primary-black-color)
+  );
+}
+
+#home .content {
+  position: absolute;
+  /* make it vertically center */
+  top: calc(50vh);
+  transform: translateY(-50%);
+  /* */
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+#home .content h1 {
+  font-size: 3rem;
+}
+
+#home .content p {
+  font-size: 2rem;
+}
+
+#home .content span {
+  color: var(--primary-red-color);
+}
+
+#home .social {
+  word-spacing: 10px;
+  margin-top: 16px;
+  color: black;
+}
+
+#home .social li {
+  display: inline-block;
+  aspect-ratio: 1 / 1;
+}
+
+#home .social li a {
+  border-radius: 50%;
+  background-color: white;
+  height: 100%;
+}
+
+#home .social li a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#home .social li a:hover i {
+  color: white;
+}
+
+#home .social li .github {
+  padding: 8px;
+}
+
+#home .social li .linkedin {
+  padding: 9px;
+}
+
+#home .social .fa-github {
+  font-size: 24px;
+}
+
+#home .social .fa-linkedin-in {
+  font-size: 24.28px;
+}
+/* Hero end */
+
+/* About start */
+#about h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+#about h2 span {
+  color: var(--primary-red-color);
+}
+
+#about .content {
+  display: flex;
+  gap: 32px;
+  color: white;
+  justify-content: center;
+}
+
+#about .content img {
+  height: 300px;
+  border-radius: 2.5rem;
+}
+
+#about .content p {
+  font-weight: 300;
+  font-size: 1.15rem;
+  max-width: 400px;
+  text-wrap: pretty;
+}
+
+/* About end */
+
+/* Experience start */
+#experience h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+#experience .timeline {
+  margin: 0 auto;
+  width: max-content; /* make element not cover the entire page */
+}
+
+#experience .checkpoint {
+  position: relative;
+  padding-bottom: var(--experience-box-gap);
+}
+
+#experience .checkpoint:nth-child(odd) {
+  border-right: var(--experience-line-width) solid var(--primary-red-color);
+  padding-right: 1.5rem;
+  transform: translateX(calc(-50% + var(--experience-line-width) / 2));
+}
+
+#experience .checkpoint:nth-child(even) {
+  border-left: var(--experience-line-width) solid var(--primary-red-color);
+  padding-left: 1.5rem;
+  transform: translateX(calc(50% - var(--experience-line-width) / 2));
+}
+
+#experience .checkpoint::before {
+  content: "";
+  background-color: var(--primary-red-color);
+  width: var(--experience-checkpoint-size);
+  height: var(--experience-checkpoint-size);
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+}
+
+/* 
+translateX: make center of this element align to timeline border 
+translateY: make center of this element align to the top of the checkpoint border
+*/
+#experience .checkpoint:nth-child(odd)::before {
+  right: 0;
+  transform: translate(var(--experience-checkpoint-x-translation), -50%);
+}
+
+#experience .checkpoint:nth-child(even)::before {
+  left: 0;
+  transform: translate(
+    calc(-1 * var(--experience-checkpoint-x-translation)),
+    -50%
+  );
+}
+
+#experience .checkpoint div {
+  padding: 8px 16px;
+  background-color: white;
+}
+
+#experience .checkpoint div h3 {
+  font-weight: 500;
+  font-size: 1.35rem;
+}
+
+#experience .checkpoint div h4 {
+  color: var(--primary-red-color);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
+#experience .checkpoint div p {
+  font-weight: 300;
+  font-style: italic;
+}
+
+#experience .checkpoint:nth-child(odd) div {
+  border-radius: 6px 0 6px 6px;
+}
+
+#experience .checkpoint:nth-child(even) div {
+  border-radius: 0 6px 6px;
+}
+/* Experience end */
+
+/* Education start */
+#education h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+#education .content {
+  color: white;
+}
+
+#education .content p {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 300;
+  max-width: 40ch;
+}
+
+#education .content .major {
+  color: var(--primary-red-color);
+}
+
+#education .content .year-taken {
+  font-size: 1.25rem;
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Education end */
+
+/* Skills start */
+#skills {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#skills h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
+#skills .content {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+#skills .skill {
+  border-radius: 8px;
+  color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 20px 0 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#skills .skill figcaption {
+  font-weight: 500;
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* skills end */
+
+/* Footer start */
+#footer {
+  display: grid;
+  justify-content: space-around;
+  row-gap: 24px;
+  padding: 20px 0;
+  color: white;
+  background-color: var(--primary-black-color);
+}
+
+#footer .content {
+  grid-row: 1 / 1;
+}
+
+#footer .content h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+#footer .content p {
+  font-size: 1rem;
+}
+
+#footer .social {
+  grid-row: 2 / 3;
+  word-spacing: 0.5rem;
+  /* height: 24px; */
+}
+
+#footer .social li {
+  display: inline-block;
+}
+
+#footer .social li a {
+  display: flex;
+  align-items: center;
+}
+
+#footer .social li a:hover {
+  opacity: 70%;
+}
+
+#footer .social li i {
+  font-size: 1.5rem;
+}
+
+#footer .contact {
+  grid-row: 1 / 3;
+}
+
+#footer .contact h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+#footer .contact ul {
+  font-size: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+#footer .contact li i {
+  margin-right: 0.25rem;
+}
+/* Footer end */

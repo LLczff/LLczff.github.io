@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Llczff Portfolio</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="keywords"
+      content="Theeradon Chaomai, Theeradon, portfolio website, software developer"
+    />
+    <meta
+      name="description"
+      content="Software developer portfolio website utilizing Github Pages. CDN included Typed.js and particles.js"
+    />
+    <meta name="author" content="Theeradon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="styles/reset.css" />
+    <!-- Default CSS -->
+    <link rel="stylesheet" href="styles/index.css" />
+    <!-- Variables -->
+    <link rel="stylesheet" href="styles/variables.css" />
+    <!-- Animation CSS (we can defer loading since it's non-critical)-->
+    <link
+      rel="preload"
+      href="styles/animation.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles/animation.css" /></noscript>
+    <!-- Responsive (needed to be the last CSS import)-->
+    <link rel="stylesheet" href="styles/responsive.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- navbar start -->
+    <header>
+      <a href="/" class="logo">
+        <img src="assets/LCF.png" alt="Logo" />
+      </a>
+      <button
+        id="hamburger"
+        onclick="toggleNavbar()"
+        aria-label="Navigation menu"
+      >
+        <div class="patty"></div>
+      </button>
+      <nav id="navbar">
+        <ul>
+          <li><a href="#home" class="link-btn">Home</a></li>
+          <li><a href="#about" class="link-btn">About</a></li>
+          <li><a href="#experience" class="link-btn">Experience</a></li>
+          <li><a href="#education" class="link-btn">Education</a></li>
+          <li><a href="#skills" class="link-btn">Skills</a></li>
+          <li><a href="#footer" class="link-btn">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section id="home">
+      <div id="particles-js"></div>
+
+      <div class="content">
+        <h1>Theeradon Chaomai</h1>
+        <p>I'm <span class="typing"></span></p>
+        <ul class="social">
+          <li>
+            <a
+              href="https://github.com/LLczff"
+              target="_blank"
+              class="link-btn github"
+              aria-label="Github link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/thee-chaomai"
+              target="_blank"
+              class="link-btn linkedin"
+              aria-label="Linkedin link"
+            >
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- hero section end -->
+
+    <main>
+      <!-- about section start -->
+      <section id="about" class="container reveal">
+        <h2>ABOUT <span>ME</span></h2>
+        <div class="content">
+          <img src="assets/profile.jpg" alt="profile" />
+          <p>
+            I'm a backend developer with a year of experience, proficient in
+            both client-side and server-side technologies. I've worked with
+            popular stacks like React and Node.js. I am constantly expanding my
+            knowledge to improve and optimize my coding practices. Eager to take
+            on challenging software development projects.
+          </p>
+        </div>
+      </section>
+      <!-- about section end -->
+
+      <!-- experience section start -->
+      <section id="experience" class="container">
+        <h2>EXPERIENCE</h2>
+        <div class="timeline">
+          <div class="checkpoint">
+            <div>
+              <h3>MINDBOT</h3>
+              <h4>Back-end Developer</h4>
+              <p>Febuary 2023 - Present</p>
+            </div>
+          </div>
+          <div class="checkpoint">
+            <div>
+              <h3>BSE Electronic</h3>
+              <h4>Web Developer Intern</h4>
+              <p>June 2021 - July 2021</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- experience section end -->
+
+      <!-- education section start -->
+      <section id="education" class="container reveal">
+        <h2>EDUCATION</h2>
+        <div class="content">
+          <p>
+            Graduated from Chulalongkorn University with a
+            <span class="major">
+              Bachelor of Engineering in Electrical Engineering
+            </span>
+          </p>
+          <p class="year-taken">August 2018 &mdash; August 2022</p>
+        </div>
+      </section>
+      <!-- education section end -->
+
+      <!-- skills section start -->
+      <section id="skills" class="container">
+        <h2>SKILLS</h2>
+
+        <div class="content">
+          <!-- <figure class="skill">
+            <img src="assets/skills/react.svg" alt="React" />
+            <figcaption>React</figcaption>
+          </figure> -->
+        </div>
+      </section>
+      <!-- skills section end -->
+    </main>
+
+    <!-- footer section start -->
+    <footer id="footer">
+      <div class="content">
+        <h2>LLczff's portfolio</h2>
+        <p>Connect with me for more information.</p>
+      </div>
+
+      <ul class="social">
+        <li>
+          <a
+            href="https://github.com/LLczff"
+            target="_blank"
+            class="link-btn"
+            aria-label="Github link"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://linkedin.com/in/thee-chaomai"
+            target="_blank"
+            class="link-btn"
+            aria-label="Linkedin link"
+          >
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+        </li>
+      </ul>
+
+      <div class="contact">
+        <h3>Contact</h3>
+        <ul>
+          <li>
+            <i class="fa fa-envelope"></i>
+            <span>theeradon.chaomai@gmail.com</span>
+          </li>
+          <li>
+            <i class="fa fa-phone"></i>
+            <span>+669 7187 0185</span>
+          </li>
+          <li>
+            <i class="fa fa-map-marked-alt"></i>
+            <span>Bangkok 10240, Thailand</span>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <!-- footer section end -->
+
+    <!-- ======================== Scripts ======================== -->
+
+    <!-- Particle JS -->
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- Typed.js -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- JS source -->
+    <script src="./index.js"></script>
+  </body>
+</html>
