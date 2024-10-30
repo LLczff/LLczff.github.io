@@ -11,5 +11,5 @@ Portfolio website developed using HTML5, CSS3, and JavaScript.
 
 **Theeradon Chaomai**
 
-- Email: [theeradon.chaomai@gmail.com](theeradon.chaomai@gmail.com)
+- Email: [theeradon.chaomai@gmail.com](mailto:theeradon.chaomai@gmail.com)
 - Linkedin: [Linkedin Profile](https://linkedin.com/in/thee-chaomai)
