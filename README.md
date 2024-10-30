@@ -7,7 +7,9 @@ Portfolio website developed using HTML5, CSS3, and JavaScript.
 
 ![screenshot](assets/screenshot.png)
 
-## Author
+## Contact
 
-👤 **Theeradon Chaomai**  
-Feel free to reach me at [Linkedin](https://linkedin.com/in/thee-chaomai)
+**Theeradon Chaomai**
+
+- Email: [theeradon.chaomai@gmail.com](theeradon.chaomai@gmail.com)
+- Linkedin: [Linkedin Profile](https://linkedin.com/in/thee-chaomai)
