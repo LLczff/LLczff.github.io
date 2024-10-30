@@ -20,15 +20,20 @@ const typed = new Typed(".typing", {
 fetch("constants/skills.json")
   .then((res) => res.json())
   .then((skills) => {
+    const invertNeeded = ["Next.js", "Express"];
+
     document.querySelector("#skills .content").innerHTML = skills
       .map(
         (skill) =>
-          // we have to invert Express logo color specifically since we cannot find white logo
+          // we have to invert some logo's color since the contrast is bad
           `<figure class="skill">
             <img
               src="${skill.image}" alt="${skill.name}"
               style="height: ${skill.height};
-                    ${skill.name === "Express" && "filter: invert(100%);"}"
+                    ${
+                      invertNeeded.includes(skill.name) &&
+                      "filter: invert(100%);"
+                    }"
             />
             <figcaption>${skill.name}</figcaption>
           </figure>`

@@ -35,6 +35,11 @@
     "height": "60px"
   },
   {
+    "name": "Next.js",
+    "image": "assets/skills/nextjs.svg",
+    "height": "50px"
+  },
+  {
     "name": "Nuxt",
     "image": "assets/skills/nuxt.svg",
     "height": "50px"
@@ -78,6 +83,11 @@
     "name": "MariaDB",
     "image": "assets/skills/mariadb.svg",
     "height": "40px"
+  },
+  {
+    "name": "MongoDB",
+    "image": "assets/skills/mongodb.svg",
+    "height": "60px"
   },
   {
     "name": "Docker",

@@ -29,6 +29,15 @@ section {
   scroll-margin-top: var(--header-height);
 }
 
+/* Heading each section */
+.container h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+
 /* Navbar start */
 header {
   position: fixed;
@@ -98,8 +107,8 @@ nav li {
 
 #navbar.menu-active {
   /* just use the number that can contain all navbar content (lil bit overflow is acceptable) */
-  /* actual number is 6x(link_height + link_border) = 243px */
-  max-height: 250px;
+  /* actual number is total_link*(link_height + link_border) = 7*(40 + 0.5) = 283.5px */
+  max-height: 284px;
 }
 
 #navbar ul {
@@ -206,14 +215,6 @@ nav li {
 /* Hero end */
 
 /* About start */
-#about h2 {
-  text-align: center;
-  color: white;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
 #about h2 span {
   color: var(--primary-red-color);
 }
@@ -240,14 +241,6 @@ nav li {
 /* About end */
 
 /* Experience start */
-#experience h2 {
-  text-align: center;
-  color: white;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
 #experience .timeline {
   margin: 0 auto;
   width: max-content; /* make element not cover the entire page */
@@ -327,15 +320,67 @@ translateY: make center of this element align to the top of the checkpoint borde
 }
 /* Experience end */
 
-/* Education start */
-#education h2 {
-  text-align: center;
+/* Project start */
+#project .content {
   color: white;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
+}
+
+#project .card {
+  display: block;
+  position: relative;
+  width: 300px;
+  aspect-ratio: 3/4;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 15px 0;
+}
+
+#project .card h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: fit-content;
+  background-color: var(--primary-red-color);
+  padding: 2px 16px;
+  border-radius: 0 4px 0 0;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
+#project .card img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+#project .overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  transform: translateX(100%);
+}
+
+#project .overlay div {
+  position: relative;
+  height: 100%;
+}
+
+#project .overlay p {
+  padding: 20px;
+}
+
+#project .overlay i {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  font-size: 1.5rem;
+}
+/* Project end */
+
+/* Education start */
 #education .content {
   color: white;
 }
@@ -366,18 +411,11 @@ translateY: make center of this element align to the top of the checkpoint borde
   padding-right: 10%;
 }
 
-#skills h2 {
-  text-align: center;
-  color: white;
-  margin-bottom: 2rem;
-  font-size: 2.5rem;
-  font-weight: 500;
-}
-
 #skills .content {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  grid-template-rows: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-rows: repeat(4, minmax(0, 1fr));
+  grid-auto-rows: 1fr;
   gap: 20px;
 }
 

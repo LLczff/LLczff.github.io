@@ -24,6 +24,17 @@
     transform: translateX(-150px);
   }
 
+  #project .card:hover .overlay {
+    transform: translateX(0);
+    transition: 150ms transform ease-out;
+  }
+
+  #project .card:hover h3 {
+    background: inherit;
+    color: var(--primary-red-color);
+    transition: 150ms all ease;
+  }
+
   .passive-state {
     /* use important to ensure final state is visible */
     opacity: 1 !important;
