@@ -63,6 +63,10 @@
     transition: 300ms height ease, 300ms border-radius ease;
   }
 
+  #project .card {
+    transition: 500ms all ease;
+  }
+
   #education .content p {
     transition: 500ms font-size ease;
   }

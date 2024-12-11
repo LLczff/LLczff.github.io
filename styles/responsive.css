@@ -1,6 +1,6 @@
 /* Desktop first approach */
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   #skills {
     padding-left: 40px;
     padding-right: 40px;
@@ -71,6 +71,15 @@
 
   #about .content p {
     font-size: 1rem;
+  }
+
+  #project .card {
+    width: 480px;
+    aspect-ratio: 3/4;
+  }
+
+  #project .card .image {
+    background-image: url("/assets/tastdy-portrait.png"); /* change image */
   }
 
   #skills {
@@ -167,6 +176,10 @@
     left: calc(50% - var(--experience-line-width));
   }
 
+  #project .card {
+    width: 420px;
+  }
+
   #education .content {
     padding: 0 1rem;
   }
@@ -193,5 +206,11 @@
 
   #footer .contact h3 {
     text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  #project .card {
+    width: 300px;
   }
 }

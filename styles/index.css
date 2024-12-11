@@ -328,8 +328,8 @@ translateY: make center of this element align to the top of the checkpoint borde
 #project .card {
   display: block;
   position: relative;
-  width: 300px;
-  aspect-ratio: 3/4;
+  width: 640px;
+  aspect-ratio: 16/9;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 15px 0;
@@ -347,10 +347,12 @@ translateY: make center of this element align to the top of the checkpoint borde
   font-weight: 500;
 }
 
-#project .card img {
-  object-fit: cover;
+/* we use backgroud-image instead of <img> element to support responsive image source changes */
+#project .card .image {
   min-width: 100%;
   min-height: 100%;
+  background-image: url("/assets/tastdy-landscape.png");
+  background-size: cover;
 }
 
 #project .overlay {
